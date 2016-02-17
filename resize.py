@@ -14,11 +14,16 @@ shellScript = open(os.path.dirname(os.path.realpath(__file__)) + '//resize.sh', 
 shellCmd = shellScript.read()
 shellScript.close()
 
+scmScript = open(os.path.dirname(os.path.realpath(__file__)) + '//resize.scm', 'r')
+scmCode = scmScript.read()
+scmScript.close()
+
 srcPath = str.replace(sys.argv[1], " ", "\\ ") # Remove spaces if necessary - doesn't work
 destPath = str.replace(sys.argv[2], " ", "\\ ")
 newX = sys.argv[3]
 newY = sys.argv[4]
 
+shellCmd = shellCmd.replace("$SCRIPT_FU_CODE", scmCode)
 shellCmd = shellCmd.replace("$PATH_TO_SRCIMG", srcPath)
 shellCmd = shellCmd.replace("$PATH_TO_DESTIMG", destPath)
 shellCmd = shellCmd.replace("$NEW_WIDTH", str(newX))

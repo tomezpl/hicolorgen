@@ -5,4 +5,4 @@
 	(define
 		srcdrawable (car (gimp-image-get-active-drawable srcimg))
 	)
-	(gimp-file-save RUN-NONINTERACTIVE srcimg srcdrawable "$PATH_TO_DESTIMG" "$PATH_TO_DESTIMG")
+	(file-png-save RUN-NONINTERACTIVE srcimg srcdrawable "$PATH_TO_DESTIMG" "$PATH_TO_DESTIMG" 0 9 0 0 0 0 0)

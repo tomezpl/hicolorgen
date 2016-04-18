@@ -6,6 +6,8 @@
 # This uses a bash script file (resize.sh) that contains the instructions 
 # for a GIMP script that will resize the picture and save it under a new name.
 # Please don't judge my Python skills, it's not that simple as C++. See what I did there?
+# UPDATE: Please do not use this script, the shell script or the Scheme script for GIMP.
+# generate.py is written with OpenCV, works much faster and you don't need to execute shell scripts.
 
 
 import os, sys

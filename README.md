@@ -10,11 +10,17 @@ You can run this command to install it, although it should come with a standard 
 
 ### Dependencies
 Since the script is written with OpenCV, you will need to install that. This apt command should install all necessary libraries and bindings for Python:
-    sudo apt-get install python-opencv
+```
+sudo apt-get install python-opencv
+```
 
 ## Usage
 This is the command format used by the script:
-    python generate.py <path-to-source-icon-image-file>
+```
+python generate.py <path-to-source-icon-image-file>
+```
 You may have to execute this with root privileges, which will result in
-    sudo python generate.py <path-to-source-icon-image-file>
+```
+sudo python generate.py <path-to-source-icon-image-file>
+```
 If your source icon image file path contains spaces, be sure to put the path in quotes.
